@@ -34,3 +34,6 @@ textSelection.addEventListener("copy", selectionHandler);
 function selectionHandler(e) {
   alert("document is copied");
 }
+
+const main = document.querySelector("main.myClass");
+main.classList.remove("myClass");

@@ -1,4 +1,21 @@
 div {
-  margin: 5px;
+  display: flex;
+
+  border: 1px solid black;
   text-align: center;
+}
+
+.myClass {
+  color: violet;
+}
+
+div {
+  background-color: turquoise;
+}
+
+input:valid {
+  border-color: green;
+}
+input:invalid {
+  border-color: red;
 }

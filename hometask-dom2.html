@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/hometask-dom2.css" />
+    <script defer src="./js/hometask-DOM2.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="part1">
+        <h1>First method</h1>
+        <div class="inputValue">
+          <input
+            type="text"
+            id="inputFormValue"
+            required
+            pattern="\d"
+            minlength="1"
+            placeholder="Input radius"
+          />
+        </div>
+        <div class="buttonValue">
+          <button onclick="calculate()">Click for rezult</button>
+        </div>
+        <div class="rezultValue">
+          <input
+            type="text"
+            id="rezultFormValue"
+            placeholder="Ball 1 volume will be here"
+          />
+        </div>
+        <h1>Second method</h1>
+        <div class="inputValue2">
+          <input
+            type="text"
+            id="inputFormValue2"
+            required
+            pattern="\d"
+            minlength="1"
+            placeholder="Input radius"
+          />
+        </div>
+        <div class="buttonValue2">
+          <button id="button2">Click for rezult</button>
+        </div>
+        <div class="rezultValue2">
+          <input
+            type="text"
+            id="rezultFormValue2"
+            placeholder="Ball 2 volume will be here"
+          />
+        </div>
+      </div>
+      <div class="part2">
+        <p >
+            <ul id="elem">
+                2.Дан элемент #elem. Реализуйте 4 функции:
+                <li> Добавьте ему
+          класс www.</li>
+                <li>Удалите у него класс www.</li>
+                <li>Проверьте наличие у
+          него класса www</li>
+                <li>Добавьте ему класс www, если его нет и удалите -
+          если есть. (https://developer.mozilla.org/ru/docs/Web/API/Element/classList)</li>
+            </ul>
+            
+          
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
