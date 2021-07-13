@@ -52,6 +52,62 @@ function changeClass() {
   }
 }
 changeClass();
-// 3. Вставьте элементы массива объектов (id, title, description) в конец ul так, чтобы каждый на каждый объект был свой li.
+// 3. Вставьте элементы массива объектов (id, title, description) в конец ul так, чтобы на каждый объект был свой li.
+
+
+
+const Objects = [
+  {
+    id: 1,
+    title: "Title 1",
+    description: "title 1 description",
+  },
+  {
+    id: 2,
+    title: "Title 2",
+    description: "title 2 description",
+  },
+  {
+    id: 3,
+    title: "Title 3",
+    description: "title 3 description",
+  },
+];
+
+const objectsElement = document.getElementById("objElements");
+
+Objects.forEach((object) =>
+  objectsElement.append(generateobjectsElement(object))
+);
+
+function generateobjectsElement({ id, title, description }) {
+  const elementItem = document.createElement("li");
+
+  const objectsFullInfo = document.createElement("div");
+
+  objectsFullInfo.append(
+    `id: ${id} title: ${title} description: ${description}`
+  );
+
+  elementItem.append(objectsFullInfo);
+
+  // Сделайте так, чтобы по нажатию на кнопку внутри li эта li удалялась из разметки.
+  const delBtn = document.createElement("button");
+  delBtn.textContent = "X";
+  delBtn.onclick = (e) => {
+    delBtn.parentElement.remove();
+  };
+  elementItem.append(delBtn);
+  return elementItem;
+};
+
 // Сделайте так, чтобы по нажатию на li - он подсвечивался другим цветом.
-// Сделайте так, чтобы по нажатию на кнопку внутри li эта li удалялась из разметки.
+
+const liBacklightDown=document.querySelectorAll('li');
+liBacklightDown.forEach((element) => 
+element.addEventListener('mousedown', e => {element.style.backgroundColor = "green"}))
+;
+const liBacklightUp=document.querySelectorAll('li');
+liBacklightUp.forEach((element) => 
+element.addEventListener('mouseup', e => {element.style.backgroundColor = "inherit"}))
+;

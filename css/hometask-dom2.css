@@ -26,3 +26,13 @@ input:invalid {
 .www2 {
   color: blueviolet;
 }
+
+ul > li {
+  border: 1px solid gray;
+  width: 300px;
+  text-align: center;
+}
+
+li > button {
+  text-align: end;
+}
